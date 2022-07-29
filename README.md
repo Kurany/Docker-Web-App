@@ -21,7 +21,7 @@ Nginx
 
 ### Prerequisites
 
-Make sure you have Docker installed on your computer. Postman or the Command Line Interface can be used to send requests to this application.
+Make sure you have Docker and Python installed on your computer. Postman or the Command Line Interface can be used to send requests to this application.
 
 To start an instance of this application
 
@@ -32,15 +32,27 @@ To start an instance of this application
    git clone https://github.com/Kurany/Docker-Web-App.git
    ```
 2. To start an instance of this application, open the project in an IDE (VS Code) or locate the project on the CLI.
-3. Build and run the docker image
+3. (Optional) Create a virtual environment
+   ```sh
+   python3 -m venv venv
+   ```
+3a. (Optional) Start a virtual environment
+   ```sh
+   source ./venv/bin/activate
+   ```
+4. Build and run the docker image
    ```sh
    docker-compose up -d
    ```
-4. To stop the running containers
+5. To stop the running containers
    ```sh
    docker-compose down
    ```
-   
+6. Exit out of the virtual environment
+   ```sh
+   deactivate
+   ```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
