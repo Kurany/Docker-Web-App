@@ -42,12 +42,12 @@ class Product:
 new_products = Product()
 app = Flask(__name__)
 
-#curl -v http://localhost:5000/products
+#curl -v http://localhost/products
 @app.route('/products')
 def get_products():
     return jsonify(new_products.products)
 
-#curl -v http://localhost:5000/product/1
+#curl -v http://localhost/product/1
 @app.route('/product/<int:id>')
 def get_product(id):
     find_prod = new_products.get_info(id)
@@ -55,13 +55,13 @@ def get_product(id):
         return f'Product with id {id} not found', 404
     return jsonify(find_prod)
 
-#curl --header "Content-Type: application/json" --request POST --data '{'Product': 'some product'} -v http://localhost:5000/product/
+#curl --header "Content-Type: application/json" --request POST --data '{"Product": "some product"}' -v http://localhost/product
 @app.route('/product', methods=['POST'])
 def post_product():
     request_item = request.json
     return jsonify(new_products.add_product(request_item['Product'])), 201
 
-#curl --header "Content-Type: application/json" --request PUT --data '{'Product': 'some product'} -v http://localhost:5000/product/2
+#curl --header "Content-Type: application/json" --request PUT --data '{"Product": "some product"}' -v http://localhost/product/2
 @app.route('/product/<int:id>', methods=['PUT'])
 def put_product(id):
     updated = request.json
@@ -70,7 +70,7 @@ def put_product(id):
         return f'Product with id {id} not found', 404
     return jsonify(modify), 200
 
-#curl --request DELETE -v http://localhost:500/product/2
+#curl --request DELETE -v http://localhost/product/2
 @app.route('/product/<int:id>', methods=['DELETE'])
 def delete_product(id):
     try_remove = new_products.remove_product(id)
