@@ -8,8 +8,6 @@ Nginx is used as a reverse proxy to forward request to our application. Docker i
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
 Python
@@ -62,17 +60,15 @@ To start an instance of this application
    ```sh
    curl -v http://localhost/products
    ```
-   [![Get Screen Shot][get-screenshot]]
+   ![Get Screen Shot][get-screenshot]
 2. To post a new product
    ```sh
    curl --header "Content-Type: application/json" --request POST --data '{"Product": "some product"}' -v http://localhost/product
    ```
-   [![Post Screen Shot][post-screenshot]]
+   ![Post Screen Shot][post-screenshot]
 3. The rest can be found in application.py
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -82,8 +78,6 @@ To start an instance of this application
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -92,8 +86,6 @@ Your Name - kuiny.tran@gmail.com
 Project Link: [https://github.com/Kurany/Docker-Web-App](https://github.com/Kurany/Docker-Web-App)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
